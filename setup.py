@@ -1,5 +1,6 @@
 from setuptools import find_packages, setup
 
+
 setup(
     name='promgen-kfdm',
     version='0.1',
@@ -25,6 +26,9 @@ setup(
         'paho-mqtt',
     ],
     entry_points={
+        'promgen.apps': [
+            'kfdm = promgenkfdm',
+        ],
         'promgen.notification': [
             'mqtt = promgenkfdm.notification.mqtt:NotificationMQTT',
         ],
